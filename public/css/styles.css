@@ -1,0 +1,274 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+main {
+    flex: 1;
+    padding: 0 20px 20px 20px;
+}
+
+#snippets {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main h1 {
+    margin: 0 auto;
+    width: fit-content;
+    font-size: 40px;
+}
+
+header {
+    position: relative;
+    background-color: whitesmoke;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 60px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+#website-icon {
+    position: absolute;
+    display: flex;
+    left: 0;
+}
+
+#website-name {
+    font-size: 40px;
+    display: flex;
+    margin: 0 0 0 5px;
+}
+
+#icon {
+    width: 40px;
+    height: 40px;
+    display: inline;
+    margin: 0 auto;
+}
+
+#nav-list {
+    position: absolute;
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    right: 15px;
+}
+
+#nav-list li {
+    display: inline;
+    margin: 0 auto;
+    font-size: 24px;
+}
+
+.new-div {
+    display: flex;
+    margin: 0 auto;
+    width: 500px;
+    height: 600px;
+    border-radius: 0 0 5px 5px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.new-div form, #login-div form {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    gap: 25px;
+}
+
+.new-div span, #login-div span {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.custom-select {
+    display: flex;
+    min-width: 350px;
+    position: relative;
+}
+
+.custom-select::before, .custom-select::after {
+  --size: 4px;
+  position: absolute;
+  content: "";
+  right: 10px;
+  pointer-events: none;
+}
+
+.custom-select::before {
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 4px solid black;
+  top: 35%;
+}
+
+.custom-select::after {
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid black;
+  top: 55%;
+}
+
+.custom-select select {
+    appearance: none;
+    width: 100%;
+    font-size: 16px;
+    padding: 5px;
+    background-color: whitesmoke;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+    border-style: none;
+    outline: none;
+    border-radius: 3px;
+    color: #000;
+    cursor: pointer;
+}
+
+#new-snippet label {
+    font-weight: bolder;
+}
+
+#new-snippet-title {
+    display: flex;
+    background-color: #a1d0fc;
+    width: 500px;
+    height: 100px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    border-width: 1px 1px 0 1px;
+    border-color:black;
+    border-style: solid;
+    border-radius: 5px 5px 0 0;
+    color: black;
+}
+
+.new-input, textarea {
+    border-style: none;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+    padding: 3px;
+    outline: none;
+}
+
+.new-input {
+    height: 25px;
+}
+
+#new-snippet textarea {
+    resize: none;
+}
+
+#code {
+    height: 136px;
+    width: 100%;
+    white-space: pre;
+    overflow: auto;
+}
+
+#description {
+    height: 75px;
+}
+
+#submit-new-snippet, #submit-new-user, #create-account, #login-button {
+    height: 25px;
+    border-radius: 10px;
+    border: none;
+    background-color: #a1d0fc;
+    font-size: larger;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+*::-webkit-scrollbar {
+    width: 10px;
+}
+  
+*::-webkit-scrollbar-thumb {
+    background-color:rgb(124, 198, 254);
+    border-radius: 5px; 
+    border: 2px solid #f9f9f9;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: white;
+    border-radius: 5px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.alert {
+    padding: 15px;
+    width: 500px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alert-error {
+    background-color: #ff6969;
+    color: black;
+    border: 1px solid red;
+}
+
+#login-div {
+    display: flex;
+    margin: 70px auto 0 auto;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 0 0 5px 5px;
+    border: 1px solid black;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+
+#create-account, #no-account {
+    width: 200px;
+    text-align: center;
+    margin: 0;
+}
+
+#create-account-span {
+    display: flex;
+    flex-direction: column;
+    margin-top: 160px;
+}
+
+#login-title {
+    margin-bottom: 20px;
+}

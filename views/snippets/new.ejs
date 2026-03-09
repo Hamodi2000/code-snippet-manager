@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Create Snippet</title>
+</head>
+<body>
+    <%- include("../partials/header.ejs") %>
+    <main>
+        <h1 id="new-snippet-title">Create snippet</h1>
+        <div id="new-snippet" class="new-div">
+            <form action="/snippets/new" method="post">
+                <span>
+                    <label for="title">Title (Max 25 characters)</label>
+                    <input type="text" id="title" class="new-input" name="title" placeholder="Snippet title..." maxlength=25 required value="<%= title || '' %>">
+                </span>
+                
+                <span>
+                    <label for="code">Code (Max 400 characters)</label>
+                    <textarea id="code" name="code" maxlength="400" placeholder="Code..." required><%= code || '' %></textarea>
+                </span>
+
+                <span>
+                    <label for="description">Description (Max 200 characters)</label>
+                    <textarea name="description" id="description" maxlength="200" placeholder="Code description..."><%= description || '' %></textarea>
+                </span>
+
+                <span>
+                    <label for="tags">Tags (Max 50 characters)</label>
+                    <input type="text" name="tags" id="tags" class="new-input"  placeholder='Seperate with ";"' maxlength=50 value="<%= tags || '' %>">
+                </span>
+                
+                <span>
+                    <label for="language">Language</label>
+                    <div class="custom-select">
+                        <select name="language" id="language" value="<%= language || '' %>">
+                        <option value="Python">Python</option>
+                        <option value="Javascript">Javascript</option>
+                        <option value="C++">C++</option>
+                        <option value="Java">Java</option>
+                        <option value="Go">Go</option>
+                        </select>
+                    </div>
+                    
+                </span>
+                
+                <button id="submit-new-snippet">Submit</button>
+                
+            </form>
+            
+        </div>
+
+    </main>
+    <%- include("../partials/footer.ejs") %>
+</body>
+</html>

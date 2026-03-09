@@ -1,0 +1,48 @@
+{
+  "name": "b2-crud",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon App.js",
+    "htmlhint": "npx htmlhint public src || exit 0",
+    "stylelint": "npx stylelint **/*.css || exit 0",
+    "stylelint:fix": "npx stylelint --fix **/*.css || exit 0",
+    "eslint": "npx eslint . || exit 0",
+    "eslint:fix": "npx eslint --fix . || exit 0",
+    "jsdoc": "npx jsdoc -c .jsdoc.json || exit 0",
+    "lint": "npm run htmlhint && npm run stylelint && npm run eslint"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.57.1",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsdoc": "^50.6.3",
+    "eslint-plugin-n": "^17.15.1",
+    "eslint-plugin-promise": "^7.2.1",
+    "htmlhint": "^1.1.4",
+    "http-server": "^14.1.1",
+    "jsdoc": "^4.0.4",
+    "stylelint": "^16.14.1",
+    "stylelint-config-recommended": "^15.0.0",
+    "vite": "^6.1.0"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^5.1.0",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "express-session": "^1.18.1",
+    "highlight.js": "^11.11.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^8.10.0",
+    "node-fetch": "^3.3.2",
+    "nodemon": "^3.1.9"
+  }
+}

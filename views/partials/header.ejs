@@ -1,0 +1,28 @@
+<header>
+    <div id="website-icon">
+        <img src="/images/add.png" id="icon" alt="Code snippet">
+        <h1 id="website-name">CodeSnipp</h1>
+    </div>
+    <% if (success.length > 0) { %>
+        <div class="alert alert-success">
+            <%= success  %>
+        </div>
+    <% } %>
+    <% if (error.length > 0) { %>
+        <div class="alert alert-error">
+            <%= error  %>
+        </div>
+    <% } %>
+    <ul id="nav-list">
+        <li><a href="/">Explore</a></li>
+        <li><a href="/snippets/new">Create</a></li>
+        <li><a href='/snippets/profile/'>Profile</a></li>
+        <% if (logout) {%>
+            <li><a href="/logout">Logout</a></li>
+        <% } else {%>
+            <li><a href="/login">Login</a></li>
+        <% } %>
+        
+    </ul>
+</header>
+<hr>

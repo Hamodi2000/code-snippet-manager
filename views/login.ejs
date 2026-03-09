@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script type="module" defer src="/js/script.js"></script>
+    <title>Login</title>
+</head>
+<body>
+    <%- include("partials/header.ejs") %>
+    <main>
+        <div id="login-div">
+            <h1 id="login-title">Login to your account</h1>
+            <form action="/login" method="post">
+                <span>
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" class="new-input" placeholder="Enter your username..." required>
+                </span>
+                <span>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" class="new-input" placeholder="Enter your Passwrd..." required>
+                </span>
+                <button id="login-button">Login</button>
+            </form>
+            <span id="create-account-span">
+                <p id="no-account">Don't have an account?</p>
+                <button id="create-account">Create account</button>
+            </span>
+            
+        </div>
+    </main>
+    <%- include("partials/footer.ejs") %>
+</body>
+</html>

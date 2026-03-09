@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script type="module" defer src="/js/script.js"></script>
+    <script type="module" defer src="/js/modules/Snippet.js"></script>
+    <title>Codesnipp</title>
+</head>
+
+<body>
+    <%- include("../partials/header.ejs") %>
+    <main>
+        <h1 id="code-snippets-title"><%= title %></h1>
+        <div id="snippets">
+            <% snippets.forEach(snippet => { %>
+                <snippet-div
+                    snippetId="<%= snippet.id %>"
+                    author="<%= snippet.author%>"
+                    title="<%= snippet.title %>" 
+                    code="<%= snippet.code %>" 
+                    language="<%= snippet.language %>"
+                    description="<%= snippet.description %>"
+                    date="<%= snippet.createdAt %>"
+                    tags="<%= JSON.stringify(snippet.tags) %>"
+                    <% if (user === snippet.author) { %> editable <% } %>>
+                </snippet-div>
+            <% }) %>
+        </div>
+    </main>
+    <%- include("../partials/footer.ejs") %>
+</body>
+
+</html>

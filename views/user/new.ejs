@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Sign up</title>
+</head>
+<body>
+    <%- include("../partials/header.ejs") %>
+    <main>
+        <h1 id="new-snippet-title">Create Account</h1>
+        <div id="new-user" class="new-div">
+            <form action="/user/new" method="post">
+                <span>
+                    <label for="username">Username (Max 25 characters)</label>
+                    <input type="text" id="username" class="new-input" name="username" placeholder="Enter a username..." maxlength=25 required value="<%= username || '' %>">
+                </span>
+
+                <span>
+                    <label for="email">Email address</label>
+                    <input type="text" id="email" class="new-input" name="email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" placeholder="Enter a email address..." maxlength=40 required value="<%= email || '' %>">
+                </span>
+
+                <span>
+                    <label for="password">Password (Max 25 characters)</label>
+                    <input type="password" name="password" id="password" class="new-input"  placeholder='Enter a password...' minlength="8" maxlength=25 required>
+                </span>
+
+                <span>
+                    <label for="repeatPassword">Repeat password</label>
+                    <input type="password" name="repeatPassword" id="repeatPassword" class="new-input"  placeholder='Repeat password...' minlength="8" maxlength=25 required>
+                </span>
+                
+                <button id="submit-new-user">Submit</button>
+            </form>
+            
+        </div>
+    </main>
+    <%- include("../partials/footer.ejs") %>
+</body>
+</html>
